@@ -15,9 +15,26 @@ function App() {
       <SearchBar seating={seating} setSearchResult={setSearchResult} />
 
       {searchResult && (
-        <p>
-          🎉 {searchResult.name} is seated at <strong>{searchResult.table}</strong>
-        </p>
+        <div style={{ marginTop: "10px" }}>
+          {searchResult.length === 1 ? (
+            <p>
+              🎉 {searchResult[0].name} is seated at <strong>{searchResult[0].table}</strong>
+            </p>
+          ) : (
+            <div>
+              <p style={{ marginBottom: "8px" }}>
+                Found {searchResult.length} result{searchResult.length !== 1 ? "s" : ""}:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: "20px" }}>
+                {searchResult.map((result, index) => (
+                  <li key={index} style={{ marginBottom: "4px" }}>
+                    🎉 {result.name} is seated at <strong>{result.table}</strong>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
 
       <SeatingLayout seating={seating} setSelectedTable={setSelectedTable} />
