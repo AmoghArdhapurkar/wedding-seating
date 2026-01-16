@@ -1,25 +1,25 @@
 {
-    "tables": [
-      {
-        "id": 1,
-        "name": "Table 1",
-        "guests": ["Alice Johnson", "Bob Smith", "Charlie Kim"],
-        "x": 100,
-        "y": 600
-      },
-      {
-        "id": 2,
-        "name": "Table 2",
-        "guests": ["Alice Parker", "David Lee", "Emily Patel", "Frank Chen"],
-        "x": 300,
-        "y": 400
-      },
-      {
-        "id": 3,
-        "name": "Table 3",
-        "guests": ["Grace Wong", "Hannah Brown", "Ian Clarke"],
-        "x": 500,
-        "y": 150
-      }
-    ]
-  }
+  "tables": [
+    {
+      "id": 1,
+      "name": "Table 1",
+      "guests": ["Alice Johnson", "Bob Smith", "Charlie Kim"],
+      "x": 15,
+      "y": 25
+    },
+    {
+      "id": 2,
+      "name": "Table 2",
+      "guests": ["Alice Parker", "David Lee", "Emily Patel", "Frank Chen"],
+      "x": 42,
+      "y": 25
+    },
+    {
+      "id": 3,
+      "name": "Table 3",
+      "guests": ["Grace Wong", "Hannah Brown", "Ian Clarke"],
+      "x": 70,
+      "y": 25
+    }
+  ]
+}

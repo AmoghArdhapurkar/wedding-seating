@@ -22,12 +22,12 @@ export default function SearchBar({ seating, setSearchResult }) {
   }, [query, seating, setSearchResult]);
 
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div className="search-bar">
       <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search your name"
-        style={{ padding: "6px", fontSize: "16px" }}
+        placeholder="Search by name to find your table..."
+        className="search-input"
       />
     </div>
   );
