@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import seating from "../data/seating.json";
 import SeatingLayout from "./SeatingLayout";
 import TableDetails from "./TableDetails";
@@ -16,9 +15,6 @@ export default function SeatingPage() {
   return (
     <div className="seating-page">
       <div className="seating-header">
-        <Link to="/" className="back-link">
-          ← Back to Home
-        </Link>
         <h1>Seating Arrangements</h1>
       </div>
 
