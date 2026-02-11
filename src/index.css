@@ -75,10 +75,22 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.placeholder-image {
+.home-welcome {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text);
+}
+
+.home-intro {
+  color: var(--color-text-light);
+  margin: 0 0 2rem 0;
+  font-size: 1.125rem;
+}
+
+.bride-groom-placeholder {
   width: 100%;
-  max-width: 400px;
-  height: 250px;
+  max-width: 320px;
+  height: 240px;
   margin: 0 auto 2rem;
   background-color: var(--color-secondary);
   border: 2px dashed var(--color-primary);
@@ -88,46 +100,8 @@ h2 {
   justify-content: center;
   color: var(--color-text-light);
   font-style: italic;
-}
-
-.reception-details {
-  background-color: white;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.reception-details h1 {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: var(--color-text);
-}
-
-.details-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.detail-item {
+  text-align: center;
   padding: 1rem;
-  background-color: var(--color-background);
-  border-radius: 8px;
-}
-
-.detail-label {
-  display: block;
-  font-size: 0.875rem;
-  color: var(--color-text-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-}
-
-.detail-value {
-  display: block;
-  font-size: 1.125rem;
-  color: var(--color-text);
 }
 
 .view-seating-btn {
@@ -403,16 +377,13 @@ h2 {
     max-width: 180px;
   }
 
-  .placeholder-image {
-    height: 180px;
-  }
-
-  .reception-details {
-    padding: 1.5rem;
-  }
-
-  .reception-details h1 {
+  .home-welcome {
     font-size: 1.5rem;
+  }
+
+  .bride-groom-placeholder {
+    max-width: 280px;
+    height: 200px;
   }
 
   .seating-page {
@@ -433,16 +404,17 @@ h2 {
     max-width: 140px;
   }
 
-  .placeholder-image {
-    height: 150px;
-  }
-
-  .reception-details h1 {
+  .home-welcome {
     font-size: 1.25rem;
   }
 
-  .detail-value {
+  .home-intro {
     font-size: 1rem;
+  }
+
+  .bride-groom-placeholder {
+    max-width: 260px;
+    height: 180px;
   }
 
   .view-seating-btn {
