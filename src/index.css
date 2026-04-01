@@ -306,8 +306,8 @@ h2 {
 .seating-layout {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
+  max-width: 1040px;
+  aspect-ratio: 4 / 3;
   background-color: white;
   border: 2px solid var(--color-secondary);
   border-radius: 12px;
@@ -508,6 +508,16 @@ h2 {
     padding: 1rem;
   }
 
+  .seating-layout-container {
+    justify-content: stretch;
+  }
+
+  .seating-layout {
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
   .seating-header h1 {
     font-size: 1.5rem;
   }
@@ -538,5 +548,10 @@ h2 {
   .view-seating-btn {
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
+  }
+
+  .table {
+    width: clamp(50px, 16%, 80px);
+    font-size: clamp(0.65rem, 3vw, 0.85rem);
   }
 }
