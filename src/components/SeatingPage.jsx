@@ -15,14 +15,18 @@ export default function SeatingPage() {
 
   return (
     <div className="seating-page">
-      <div className="seating-header">
-        <Link to="/" className="back-link">
-          ← Back to Home
-        </Link>
-        <h1>Seating Arrangements</h1>
+      <div className="seating-header-card">
+        <div className="seating-header">
+          <Link to="/" className="back-link">
+            ← Back to Home
+          </Link>
+          <h1>Seating Arrangements</h1>
+        </div>
+        <p className="seating-subtitle">
+          Search your name, then tap your table on the chart to see who is seated with you.
+        </p>
+        <SearchBar seating={seating} setSearchResult={setSearchResult} />
       </div>
-
-      <SearchBar seating={seating} setSearchResult={setSearchResult} />
 
       {searchResult && (
         <div className="search-results">

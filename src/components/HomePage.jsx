@@ -7,9 +7,10 @@ export default function HomePage() {
       <div className="home-content">
         <img src={logo} alt="Wedding Logo" className="wedding-logo" />
 
-        <h1 className="home-welcome">Welcome</h1>
+        <h1 className="home-welcome">Welcome to Our Reception</h1>
+        <p className="home-subtitle">Saturday, April 25 · South Riding, Virginia</p>
         <p className="home-intro">
-          Use this site to find your seat at our wedding reception.
+          Use this site to find your seat at our wedding reception!
         </p>
 
         <div className="bride-groom-placeholder" aria-hidden="true">
