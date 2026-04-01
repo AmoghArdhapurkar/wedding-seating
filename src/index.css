@@ -81,8 +81,6 @@ h2 {
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(190, 217, 235, 0.7);
-  position: relative;
-  overflow: hidden;
 }
 
 .wedding-logo {
@@ -131,27 +129,6 @@ h2 {
   color: var(--color-text-light);
   font-style: italic;
   font-size: 0.95rem;
-}
-
-.home-content::before,
-.home-content::after {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 1px solid rgba(190, 217, 235, 0.6);
-  pointer-events: none;
-}
-
-.home-content::before {
-  top: -70px;
-  left: -40px;
-}
-
-.home-content::after {
-  bottom: -80px;
-  right: -30px;
 }
 
 .view-seating-btn {
@@ -551,7 +528,7 @@ h2 {
   }
 
   .table {
-    width: clamp(50px, 16%, 80px);
+    width: clamp(44px, 11%, 70px);
     font-size: clamp(0.65rem, 3vw, 0.85rem);
   }
 }
