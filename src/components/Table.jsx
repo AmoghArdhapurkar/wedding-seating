@@ -4,8 +4,8 @@ export default function Table({ table, onClick, highlight }) {
       onClick={() => onClick(table)}
       className={`table ${highlight ? "table-highlight" : ""}`}
       style={{
-        left: `${table.x}%`,
-        top: `${table.y}%`,
+        left: `${table.x ?? 50}%`,
+        top: `${table.y ?? 50}%`,
       }}
     >
       {table.name}

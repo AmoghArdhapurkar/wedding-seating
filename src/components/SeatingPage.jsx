@@ -2,16 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import seating from "../data/seating.json";
 import SeatingLayout from "./SeatingLayout";
-import TableDetails from "./TableDetails";
 import SearchBar from "./SearchBar";
 
 export default function SeatingPage() {
-  const [selectedTable, setSelectedTable] = useState(null);
   const [searchResult, setSearchResult] = useState(null);
-
-  const handleTableClick = (table) => {
-    setSelectedTable(table);
-  };
+  const highlightedTableNames = searchResult
+    ? [...new Set(searchResult.map((result) => result.table))]
+    : [];
 
   return (
     <div className="seating-page">
@@ -51,17 +48,7 @@ export default function SeatingPage() {
         </div>
       )}
 
-      <SeatingLayout 
-        seating={seating} 
-        setSelectedTable={handleTableClick} 
-        highlightedTableId={searchResult?.length === 1 ? 
-          seating.tables.find(t => t.name === searchResult[0].table)?.id : null
-        }
-      />
-
-      {selectedTable && (
-        <TableDetails table={selectedTable} onClose={() => setSelectedTable(null)} />
-      )}
+      <SeatingLayout highlightedTableNames={highlightedTableNames} />
     </div>
   );
 }

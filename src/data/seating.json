@@ -3,72 +3,52 @@
     {
       "id": 1,
       "name": "Table 1",
-      "guests": ["Alice Johnson", "Bob Smith", "Charlie Kim", "Liam Turner", "Sophia Rivera"],
-      "x": 15,
-      "y": 28
+      "guests": ["Person One"]
     },
     {
       "id": 2,
       "name": "Table 2",
-      "guests": ["Alice Parker", "David Lee", "Emily Patel", "Frank Chen", "Noah Martinez", "Olivia Hughes"],
-      "x": 28,
-      "y": 28
+      "guests": ["Person Two"]
     },
     {
       "id": 3,
       "name": "Table 3",
-      "guests": ["Grace Wong", "Hannah Brown", "Ian Clarke", "Mason Brooks", "Ava Collins"],
-      "x": 15,
-      "y": 50
+      "guests": ["Person Three"]
     },
     {
       "id": 4,
       "name": "Table 4",
-      "guests": ["Ethan Ramirez", "Isabella Foster", "Logan Price", "Mia Sanders", "James Cooper"],
-      "x": 28,
-      "y": 50
+      "guests": ["Person Four"]
     },
     {
       "id": 5,
       "name": "Table 5",
-      "guests": ["Benjamin Ross", "Charlotte Kelly", "Henry Ward", "Amelia Diaz", "Alexander Gray"],
-      "x": 21.5,
-      "y": 72
+      "guests": ["Person Five"]
     },
     {
       "id": 6,
       "name": "Table 6",
-      "guests": ["Michael Rivera", "Abigail Morris", "Daniel Howard", "Ella Rogers", "Matthew Powell"],
-      "x": 72,
-      "y": 28
+      "guests": ["Person Six"]
     },
     {
       "id": 7,
       "name": "Table 7",
-      "guests": ["Jackson Perry", "Harper Bell", "Sebastian Cox", "Lily Griffin", "Wyatt Barnes"],
-      "x": 85,
-      "y": 28
+      "guests": ["Person Seven"]
     },
     {
       "id": 8,
       "name": "Table 8",
-      "guests": ["Oliver Murray", "Evelyn Stone", "Jack Hayes", "Scarlett Boyd", "Leo Armstrong"],
-      "x": 72,
-      "y": 50
+      "guests": ["Person Eight"]
     },
     {
       "id": 9,
       "name": "Table 9",
-      "guests": ["Samuel Knight", "Victoria Craig", "Owen Carr", "Penelope Dean", "Luke Elliott"],
-      "x": 85,
-      "y": 50
+      "guests": ["Person Nine"]
     },
     {
       "id": 10,
       "name": "Table 10",
-      "guests": ["Joseph Warren", "Nora Fox", "Caleb Weaver", "Madison Hart", "Ryan Holland"],
-      "x": 78.5,
-      "y": 72
+      "guests": ["Person Ten"]
     }
   ]
 }
