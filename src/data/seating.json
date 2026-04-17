@@ -149,11 +149,6 @@
       "id": 30,
       "name": "Table 30",
       "guests": ["Person Thirty"]
-    },
-    {
-      "id": 31,
-      "name": "Table 31",
-      "guests": ["Person Thirty-One"]
     }
   ]
 }
