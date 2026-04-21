@@ -13,7 +13,7 @@
     {
       "id": 3,
       "name": "Table 3",
-      "guests": ["Ankit Agarwal", "Sina Jahan", "Nicole Martinago", "Silah Ali", "Ehson Ali", "Abhi Jampana", "Anuj Desai", "Haseeb Shaker", "Shezia Khan", "Sherry Singh"]
+      "guests": ["Ankit Agarwal", "Sina Jahan", "Nicole Martingano", "Silah Ali", "Ehson Ali", "Abhi Jampana", "Anuj Desai", "Haseeb Shaker", "Shezia Khan", "Sherry Singh"]
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
     {
       "id": 9,
       "name": "Table 9",
-      "guests": ["Madhavi Maroju", "Praveen Maroju", "Satish Maroju", "Srinita Maroju", "Akshaya Maroju", "Vaishnavi Chandu", "Rithika Pentyala", "Prashanthi Pentyala", "Lakshman Chandu", "Bhargavi Chandu"]
+      "guests": ["Madhavi Maroju", "Praveen Maroju", "Satish Maroju", "Srinita Maroju", "Akshaya Maroju", "Vaishnavi Chandu", "Rithika Pentyala", "Prashanthi Pentyala", "Laxman Chandu", "Bhargavi Chandu"]
     },
     {
       "id": 10,
@@ -68,7 +68,7 @@
     {
       "id": 14,
       "name": "Table 14",
-      "guests": ["Suraj Kurapati", "Satvik Kurapati", "Supraja Kurapati", "Vareenia Mamidi", "Bhanuprakash Mamidi", "Srinivas Seetha", "Pallavi Seetha", "Shruti Rajamanickam", "Prabhu Rajamanickam"]
+      "guests": ["Suraj Kurapati", "Satvik Kurapati", "Sarthak Kurapati", "Supraja Kurapati", "Vareenia Mamidi", "Bhanuprakash Mamidi", "Srinivas Seetha", "Pallavi Seetha", "Shruti Rajamanickam", "Prabhu Rajamanickam"]
     },
     {
       "id": 15,
@@ -113,7 +113,7 @@
     {
       "id": 23,
       "name": "Table 23",
-      "guests": ["Chinmay Rakhe", "Vaibhav Rakhe", "Chaitanya Rakhe", "Amruta Rakhe", "Sangita Sakarkar", "Subhash Khursale", "Nandakumar Sakarkar", "Amogh Ardhapurkar", "Kshitija Kanadkhedkar", "Sandeep Ardhapurkar", "Abeer Kanadkhedkar", "Nabha Ardhapurkar", "Rhea Kanadkhedkar", "Satish Ardhapurkar", "Mayuk Kanadkhedkar", "Kshama Ardhapurkar"]
+      "guests": ["Chinmay Rakhe", "Vaibhav Rakhe", "Chaitanya Rakhe", "Amruta Rakhe", "Sangita Sakarkar", "Subhash Khursale", "Nandakumar Sakarkar", "Amogh Ardhapurkar", "Kshitija Kanadkhedkar", "Sandeep Ardhapurkar", "Abeer Kanadkhedkar", "Nabha Ardhapurkar", "Rhea Kanadkhedkar", "Satish Ardhapurkar", "Mayur Kanadkhedkar", "Kshama Ardhapurkar"]
     },
     {
       "id": 24,
