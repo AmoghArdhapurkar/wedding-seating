@@ -147,6 +147,46 @@ h2 {
   transform: translateY(-2px);
 }
 
+.home-photo-album {
+  margin-top: 2.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(190, 217, 235, 0.85);
+}
+
+.home-photo-album-title {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-text);
+}
+
+.home-photo-album-text {
+  margin: 0 auto 1.25rem;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 34rem;
+}
+
+.photo-album-btn {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  background-color: #fff;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid var(--color-primary);
+  transition: background-color 0.25s, color 0.25s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(132, 185, 214, 0.2);
+}
+
+.photo-album-btn:hover {
+  background-color: var(--color-secondary);
+  color: #4a8aad;
+  transform: translateY(-1px);
+}
+
 /* ===================== */
 /* Seating Page Styles */
 /* ===================== */
