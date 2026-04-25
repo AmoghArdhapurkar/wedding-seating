@@ -2,6 +2,22 @@ import { useCallback, useEffect, useRef } from "react";
 import seatingChartImage from "../assets/Seating chart.png";
 import tableRegions from "../data/tableRegions.json";
 
+function pointInRegion(px, py, region, width, height) {
+  if (region.w && region.h) {
+    const x = region.x * width;
+    const y = region.y * height;
+    const w = region.w * width;
+    const h = region.h * height;
+    return px >= x && px <= x + w && py >= y && py <= y + h;
+  }
+  const cx = (region.cx ?? region.x + region.w / 2) * width;
+  const cy = (region.cy ?? region.y + region.h / 2) * height;
+  const radius = (region.r ?? Math.min(region.w, region.h) * 0.5) * Math.min(width, height);
+  const dx = px - cx;
+  const dy = py - cy;
+  return dx * dx + dy * dy <= radius * radius;
+}
+
 function getRegionCenterPx(region, width, height) {
   if (region.w && region.h) {
     return {
@@ -19,7 +35,10 @@ function tableNumberLabel(tableName) {
   return match ? match[0] : tableName;
 }
 
-export default function SeatingLayout({ highlightedTableNames = [] }) {
+export default function SeatingLayout({
+  highlightedTableNames = [],
+  onSelectTable,
+}) {
   const imageRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -122,6 +141,42 @@ export default function SeatingLayout({ highlightedTableNames = [] }) {
     };
   }, [drawHighlights]);
 
+  const handleCanvasPointerDown = useCallback(
+    (event) => {
+      if (!onSelectTable || highlightedTableNames.length === 0) {
+        return;
+      }
+      const image = imageRef.current;
+      const canvas = canvasRef.current;
+      if (!image || !canvas) {
+        return;
+      }
+      const width = image.clientWidth;
+      const height = image.clientHeight;
+      if (!width || !height) {
+        return;
+      }
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const x = (event.clientX - rect.left) * scaleX;
+      const y = (event.clientY - rect.top) * scaleY;
+
+      for (let i = highlightedTableNames.length - 1; i >= 0; i -= 1) {
+        const tableName = highlightedTableNames[i];
+        const region = tableRegions[tableName];
+        if (region && pointInRegion(x, y, region, width, height)) {
+          onSelectTable(tableName);
+          return;
+        }
+      }
+    },
+    [highlightedTableNames, onSelectTable],
+  );
+
+  const chartInteractive =
+    Boolean(onSelectTable) && highlightedTableNames.length > 0;
+
   return (
     <div className="seating-layout-container">
       <div className="seating-layout chart-layout">
@@ -131,7 +186,11 @@ export default function SeatingLayout({ highlightedTableNames = [] }) {
           alt="Wedding seating chart"
           className="seating-chart-image"
         />
-        <canvas ref={canvasRef} className="seating-chart-canvas" />
+        <canvas
+          ref={canvasRef}
+          className={`seating-chart-canvas${chartInteractive ? " seating-chart-canvas--interactive" : ""}`}
+          onPointerDown={chartInteractive ? handleCanvasPointerDown : undefined}
+        />
       </div>
     </div>
   );

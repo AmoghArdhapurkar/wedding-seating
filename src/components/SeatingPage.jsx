@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import seating from "../data/seating.json";
 import SeatingLayout from "./SeatingLayout";
 import SearchBar from "./SearchBar";
+import TableDetails from "./TableDetails";
 
 export default function SeatingPage() {
   const [searchResult, setSearchResult] = useState(null);
+  const [detailTable, setDetailTable] = useState(null);
   const highlightedTableNames = searchResult
     ? [...new Set(searchResult.map((result) => result.table))]
     : [];
+
+  const handleSelectTable = (tableName) => {
+    const table = seating.tables.find((t) => t.name === tableName);
+    if (table) {
+      setDetailTable(table);
+    }
+  };
+
+  const updateSearchResult = useCallback((result) => {
+    setSearchResult(result);
+    if (!result) {
+      setDetailTable(null);
+    }
+  }, []);
 
   return (
     <div className="seating-page">
@@ -22,7 +38,7 @@ export default function SeatingPage() {
         <p className="seating-subtitle">
           Search your name, then tap your table on the chart to see who is seated with you.
         </p>
-        <SearchBar seating={seating} setSearchResult={setSearchResult} />
+        <SearchBar seating={seating} setSearchResult={updateSearchResult} />
       </div>
 
       {searchResult && (
@@ -48,7 +64,14 @@ export default function SeatingPage() {
         </div>
       )}
 
-      <SeatingLayout highlightedTableNames={highlightedTableNames} />
+      <SeatingLayout
+        highlightedTableNames={highlightedTableNames}
+        onSelectTable={handleSelectTable}
+      />
+
+      {detailTable && (
+        <TableDetails table={detailTable} onClose={() => setDetailTable(null)} />
+      )}
     </div>
   );
 }
